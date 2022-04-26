@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Web Store</h1>
+    <div class = "container">
+        <div class = "items">
+            <div class = "keychron">
+                <img src="keychron.jpeg" id = "image" alt="">
+                <h4 id ="head">Keychron K2</h4>
+                <p>Price: $90.00</p>
+            </div>
+            <div class = "razor">
+                <img src="razor.jpeg" id = "image" alt="">
+                <h4 id ="head">Razor DeathAdder V2 X</h4>
+                <p>Price: $20.00</p>    
+            </div>
+            <div class = "headphone">
+                <img src="headphone.jpeg" id = "image" alt="">
+                <h4 id ="head">Razor Kraken Pro v2 </h4>
+                <p>Price: $50.00</p>
+            </div>
+        </div>
+        <div class = "form">
+            <h3>User</h3>
+            <form action = "customerBackend.php" method ="post" onsubmit="return validate()">
+                <label for="c1">Username:</label>
+                <input type="text" name = "q1" id = "c1"><br>
+                <label for="c2">Password:</label>
+                <input type="text" name = "q2" id = "c2">
+                <table>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <td>Keychron K2</td>
+                        <td>$90.00</td>
+                        <td><input type = "number" id = "c6" name ="keychron" placeholder="Enter quantity"></td>
+                    </tr>
+                    <tr>
+                        <td>Razor DeathAdder V2 X</td>
+                        <td>$20.00</td>
+                        <td><input type = "number" id = "c7" name ="mouse" placeholder="Enter quantity"></td>
+                    </tr>
+                    <tr>
+                        <td>Razor Kraken Pro v2</td>
+                        <td>$50.00</td>
+                        <td><input type = "number" id = "c8" name ="headphone" placeholder="Enter quantity"></td>
+                    </tr>
+                </table>
+                <p>Shipping Options: </p>
+
+                <input type="radio" name = "q3" id = "c3" value = "Free 7 day">
+                <label for="c3">Free 7 day</label><br>
+        
+                <input type="radio" name = "q3" id = "c4" value = "Over night">
+                <label for="c4">$50.00 over night</label><br>
+                
+                <input type="radio" name = "q3" id = "c5" value = "Three day">
+                <label for="c5">$5.00 three day</label><br>
+        
+                
+                <button id = "submit">Submit</button>
+            </form>
+            <button id = "reset">Reset Form</button>
+
+        </div>
+
+    </div>
+    <script src = "formChecker.js"></script>
+</body>
+</html>
